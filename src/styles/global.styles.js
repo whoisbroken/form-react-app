@@ -91,6 +91,9 @@ const reset = css`
 
 export const GlobalStyle = createGlobalStyle`
   ${reset};
+  * {   
+    box-sizing: border-box;
+  }
   body {
     font-size: 16px;
     color: #000;
@@ -119,3 +122,11 @@ export const Container = styled.div`
   }
 `;
 
+export const Title = styled.h1`
+  text-align: center;
+  font-family: 'Geometria-ExtraBold', sans-serif;
+  font-weight: 800;
+  font-size: 68px;
+  margin-bottom: 20px;
+  color: #363b5d;
+`;

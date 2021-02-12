@@ -3,7 +3,7 @@ import { Formik } from "formik";
 
 import {
   Form, GroupFields, FlexInputs, Input,
-  Title, SubTitle, Text, Label, LabelText, Button, Tabs, Tab,
+  SectionTitle, Text, Label, LabelText, Button, Tabs, Tab,
   Wrapper, UploadLogo
 } from "./formBody.styles";
 
@@ -11,9 +11,9 @@ class FormBody extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Заповніть форму</Title>
+        <SectionTitle>Заповніть форму</SectionTitle>
         <Tabs>
-          <Tab active >Фіз. особа</Tab>
+          <Tab active>Фіз. особа</Tab>
           <Tab>Юр. особа</Tab>
         </Tabs>
         <Formik
@@ -77,7 +77,7 @@ class FormBody extends Component {
                       border={
                         touched.surName && errors.surName && "1px solid red"
                       }
-                      type="password"
+                      type="text"
                       name="surName"
                       size="200px"
                     />
@@ -92,7 +92,7 @@ class FormBody extends Component {
                     onBlur={handleBlur}
                     value={values.company}
                     border={touched.company && errors.company && "1px solid red"}
-                    type="tel"
+                    type="text"
                     name="company"
                   />
                   <UploadLogo>
@@ -136,7 +136,7 @@ class FormBody extends Component {
                     onBlur={handleBlur}
                     value={values.country}
                     border={touched.country && errors.country && "1px solid red"}
-                    type="tel"
+                    type="text"
                     name="country"
                   />
                 </Label>
@@ -150,7 +150,7 @@ class FormBody extends Component {
                       onBlur={handleBlur}
                       value={values.city}
                       border={touched.city && errors.city && "1px solid red"}
-                      type="email"
+                      type="text"
                       name="city"
                       size="200px"
                     />
@@ -164,7 +164,7 @@ class FormBody extends Component {
                       onBlur={handleBlur}
                       value={values.state}
                       border={touched.state && errors.state && "1px solid red"}
-                      type="tel"
+                      type="text"
                       name="state"                 
                       size="200px"
                     />
@@ -179,7 +179,7 @@ class FormBody extends Component {
                     onBlur={handleBlur}
                     value={values.address}
                     border={touched.address && errors.address && "1px solid red"}
-                    type="tel"
+                    type="text"
                     name="address"
                   />
                 </Label>
@@ -192,13 +192,12 @@ class FormBody extends Component {
                     onBlur={handleBlur}
                     value={values.postIndex}
                     border={touched.email && errors.postIndex && "1px solid red"}
-                    type="email"
+                    type="text"
                     name="postIndex"
                     size="200px"
                   />
                 </Label>
               </GroupFields>
-              {/* <Button type="submit">Submit</Button> */}
             </Form>
           )}
         />

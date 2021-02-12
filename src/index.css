@@ -80,7 +80,7 @@ input[type='text'], input[type='number'], input[type='password'], input[type='em
   -moz-appearance: none;
   appearance: none;
   color: #0d0c22;
-  background-color: #f3f3f4;
+  background-color: #f3f7fa;
 }
 
 input:hover[type='text'], input:hover[type='number'], input:hover[type='password'], input:hover[type='email'], input:hover[type='tel'], textarea:hover, select:hover {

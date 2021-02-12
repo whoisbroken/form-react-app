@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { Title } from "../../styles/global.styles";
+
+
 export const Wrapper = styled.div`
   width: 100%;
 `;
@@ -9,6 +12,7 @@ export const Wrapper = styled.div`
 export const Form = styled.form`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 40px;
 `;
 
 export const GroupFields = styled.div`
@@ -20,6 +24,7 @@ export const GroupFields = styled.div`
 export const FlexInputs = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const Input = styled.input`
@@ -39,29 +44,20 @@ export const Button = styled.button`
 
 // Text
 
-export const Title = styled.h1`
-  text-align: center;
-  font-family: 'Geometria-ExtraBold', sans-serif;
-  font-weight: 800;
-  font-size: 68px;
-  margin-bottom: 20px;
-  color: #363b5d;
-`;
-
-export const SubTitle = styled.p`
-  text-align: center;
-  margin-bottom: 20px;
+export const SectionTitle = styled(Title)`
+  
 `;
 
 export const Text = styled.p`
-font-family: "Geometria-Light", sans-serif;
-  color: ${props => props.color || '#4d4d4d'}
+  font-family: "Geometria-Light", sans-serif;
+  color: #ccced6;
 `;
 
 export const Label = styled.label`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  color: #777;
+  color: #ced1d5;
   font-size: 0.8em;   
   margin: 27px 0 4px;
   position: ${({ position }) => position || ""};
@@ -74,7 +70,7 @@ export const UploadLogo = styled.span`
   top: 50%;
 `;
 
-export const LabelText = styled.span`
+export const LabelText = styled.p`
   margin-bottom: 7px;
 `;
 
