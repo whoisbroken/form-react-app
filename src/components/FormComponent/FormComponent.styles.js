@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import { Title } from "../../styles/global.styles";
 
-
 export const Wrapper = styled.div`
   width: 100%;
 `;
@@ -13,25 +12,54 @@ export const Form = styled.form`
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media (max-width: 1005px) { 
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 450px) { 
+    min-width: 100%;
+  }
 `;
 
 export const GroupFields = styled.div`
   display: flex;
   flex-direction: column;
   min-width: 420px;
+  @media (max-width: 1005px) { 
+    justify-content: center;
+  }
+
+  @media (max-width: 450px) { 
+    min-width: 240px;
+  }
+  
 `;
 
 export const FlexInputs = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 450px) { 
+    flex-direction: column;
+    .card-input {
+      display: none;
+    }
+  }
+  
 `;
 
 export const Input = styled.input`
   width: ${({ size }) => size || "100%"};
+  flex-basis: 50%;
   height: 35px;
   border: 1px solid #ccc;
-  background-color: #fff;
+
+  @media (max-width: 450px) { 
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
@@ -68,6 +96,10 @@ export const UploadLogo = styled.span`
   position: absolute;
   right: -70px;
   top: 50%;
+  @media (max-width: 600px) {
+    right: 0;
+    top: 0;
+  }
 `;
 
 export const LabelText = styled.p`

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Formik } from "formik";
 
-import {FlexInputs, Input, LabelText } from "../formBody/formBody.styles"
+import { FlexInputs, Input, LabelText } from "../FormComponent/FormComponent.styles"
 
 import {
   SectionTitle, SubTitle, TypesOfSupport,
@@ -102,21 +102,24 @@ class Support extends Component {
                             type="text"
                             name="cardFirst4"
                           />
-                          <CardInput
+                          <CardInput 
+                            className="card-input"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.cardSecond4}
                             type="text"
                             name="cardSecond4"
                           />
-                          <CardInput
+                          <CardInput 
+                            className="card-input"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.cardThird4}
                             type="text"
                             name="cardThird4"
                           />
-                          <CardInput
+                          <CardInput 
+                            className="card-input"
                             onChange={handleChange}
                             onBlur={handleBlur}
                             value={values.cardFourth4}

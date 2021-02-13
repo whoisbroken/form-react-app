@@ -5,9 +5,9 @@ import {
   Form, GroupFields, FlexInputs, Input,
   SectionTitle, Text, Label, LabelText, Button, Tabs, Tab,
   Wrapper, UploadLogo
-} from "./formBody.styles";
+} from "./FormComponent.styles.js";
 
-class FormBody extends Component {
+class FormComponent extends Component {
   render() {
     return (
       <Wrapper>
@@ -30,18 +30,12 @@ class FormBody extends Component {
             } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
               errors.email = 'Invalid email address';
             }
-
-            if (!values.password) {
-              errors.password = "A password is required";
-            } else if (values.password.length < 6) {
-              errors.password = "Password must be 6 characters";
-            }
             return errors;
           }}
           onSubmit={values => {
             console.log(values);
           }}
-          render={({
+          render={({  
             touched,
             errors,
             values,
@@ -165,7 +159,7 @@ class FormBody extends Component {
                       value={values.state}
                       border={touched.state && errors.state && "1px solid red"}
                       type="text"
-                      name="state"                 
+                      name="state"  
                       size="200px"
                     />
                   </Label>
@@ -206,4 +200,4 @@ class FormBody extends Component {
   }
 }
 
-export default FormBody;
+export default FormComponent;

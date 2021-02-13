@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { Title} from "../../styles/global.styles";
-import { Label, Input } from "../../components/formBody/formBody.styles";
+import { Label, Input } from "../FormComponent/FormComponent.styles.js";
 
 import { ReactComponent as Hand } from "../../assets/open-hands.svg";
 import { ReactComponent as Wallet } from "../../assets/wallet.svg";
@@ -36,6 +36,7 @@ export const SupportList = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const SupportItem = styled.li`
@@ -57,6 +58,16 @@ export const SupportItem = styled.li`
     }
   }
 
+  @media (max-width: 950px) {
+    flex-basis: 48%;
+    margin-bottom: 15px;
+    margin-right: 8px;
+  }
+
+  @media (max-width: 600px) {
+    justify-content: center;
+  }
+
 `;
 
 export const Box = styled.div`
@@ -68,17 +79,17 @@ export const Box = styled.div`
   background-color: transparent;
   border: 2px solid #c5d5e6;
   border-radius: 15px;
-  margin-right: 25px;
+  margin-right: 20px;
   transition: .3s all ease;
 `;
 
-export const ItemText = styled.span`
+export const ItemText = styled.h4`
   font-size: 16px;
   line-height: 16px;  
   color: #c5d5e6;
   font-weight: 600;
   transition: .3s all ease;
-
+  width: 66px;
 `;
 
 export const GroupLogos = styled.div`
@@ -94,7 +105,7 @@ export const HandLogo = styled(Hand)`
 `
 
 export const WalletLogo = styled(Wallet)`
-  width: 41px;
+  width: 74px;
   height: 38px;
   fill: #c5d5e6;
 `
@@ -180,6 +191,9 @@ export const Payment = styled.div`
   	margin-left: -13px;
   }
 
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `
 export const PaymentMethod = styled.div`
   flex-basis: 60%;
@@ -199,6 +213,10 @@ export const PaymentText = styled.span`
 export const PaymentList = styled.ul`
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: 600px) {
+    justify-content: space-between;
+  }
 `
 
 export const PaymentItem = styled.li`
@@ -216,10 +234,18 @@ export const PaymentItem = styled.li`
   &:hover {
     background-color: #9c5d9a;
   }
+  
+  @media (max-width: 475px) {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
 `
 
 export const Card = styled.div`
   width: 373px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 export const CardDetails = styled.div`
@@ -274,5 +300,10 @@ export const Button = styled.button`
   &:hover {
     background: rgb(139,105,173);
     background: linear-gradient(90deg, rgba(139,105,173,1) 0%, rgba(229,54,86,1) 100%);
+  }
+
+  @media (max-width: 350px) {
+    width: 250px;
+    height: 50px;
   }
 `

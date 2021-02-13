@@ -8,4 +8,7 @@ export const HomepageContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   padding: 40px;
+  @media (max-width: 600px) {
+    padding: 16px;
+  }
 `;
